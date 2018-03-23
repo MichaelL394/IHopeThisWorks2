@@ -20,6 +20,12 @@ public class SquareView extends android.support.v7.widget.AppCompatImageView {
 
     @Override
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, widthMeasureSpec); // This is the key that will make the height equivalent to its width
+        if (widthMeasureSpec < heightMeasureSpec) {
+            super.onMeasure(widthMeasureSpec, widthMeasureSpec);
+        } else if (heightMeasureSpec < widthMeasureSpec) {
+            super.onMeasure(heightMeasureSpec, heightMeasureSpec);
+        } else {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        }
     }
 }

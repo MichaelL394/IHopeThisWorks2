@@ -37,9 +37,9 @@ public class ImageAdapter extends BaseAdapter {
 
         if (convertView == null) {
             squareView = new SquareView(mContext);
-            squareView.setLayoutParams(new GridView.LayoutParams(350, 350));
+            squareView.setLayoutParams(new GridView.LayoutParams(450, 450));
             squareView.setScaleType(SquareView.ScaleType.CENTER_CROP);
-            squareView.setPadding(2, 2, 2, 2);
+            squareView.setPadding(8, 8, 8, 8);
         }
         else
         {
@@ -55,10 +55,11 @@ public class ImageAdapter extends BaseAdapter {
             R.drawable.apple,
             R.drawable.strawberries,
             R.drawable.tomatoes,
-            R.drawable.watermelons
+            R.drawable.watermelons,
+            R.drawable.bananna1
     };
     public String[] two = {
-           "This is an apple","These are strawberries \n They taste good \n Much good","A red Fruit",("Green mean\n melon machine"), "cat"
+           "This is an apple","These are strawberries \n They taste good \n Much good","A red Fruit",("Green mean\n melon machine"), "phone", "phone"
     };
 
 }
